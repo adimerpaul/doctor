@@ -3,27 +3,28 @@
 namespace Database\Seeders;
 
 use App\Models\Carrusel;
+use App\Models\Especialidad;
 use App\Models\User;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
-{
-    /**
-     * Seed the application's database.
-     */
-    public function run(): void
-    {
-        // User::factory(10)->create();
-
-//        User::factory()->create([
-//            'name' => 'Test User',
-//            'email' => 'test@example.com',
-//        ]);
-
+class DatabaseSeeder extends Seeder{
+    public function run(): void{
         Carrusel::create(["src"=>"1.png"]);
         Carrusel::create(["src"=>"2.png"]);
         Carrusel::create(["src"=>"3.png"]);
+
+        Especialidad::create(["img"=>"10.png", "nombre"=>"Dentista"]); //1
+        Especialidad::create(["img"=>"11.png", "nombre"=>"Cardiologo"]); //2
+        Especialidad::create(["img"=>"12.png", "nombre"=>"Dermatologo"]); //3
+        Especialidad::create(["img"=>"13.png", "nombre"=>"Ayurveda"]); //4
+        Especialidad::create(["img"=>"14.png", "nombre"=>"Oftalmologo"]); //5
+        Especialidad::create(["img"=>"15.png", "nombre"=>"Ortopedista"]); //6
+        Especialidad::create(["img"=>"16.png", "nombre"=>"Urologo"]); //7
+        Especialidad::create(["img"=>"17.png", "nombre"=>"Ginecologo"]); //8
+        Especialidad::create(["img"=>"18.png", "nombre"=>"Gastroenterologo"]); //9
+        Especialidad::create(["img"=>"19.png", "nombre"=>"Homeopata"]); //10
+        Especialidad::create(["img"=>"20.png", "nombre"=>"Neumologo"]); //11
+        Especialidad::create(["img"=>"21.png", "nombre"=>"Cuidado de la piel"]); //12
 
     }
 }
