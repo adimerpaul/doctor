@@ -705,115 +705,192 @@ class DatabaseSeeder extends Seeder{
 //service: "Eye Care",
 //action: "<a  rel="tooltip" title="" href="https://demo.freaktemplate.com/bookappointment/backend/savedoctor/13" class="m-b-10 m-l-5" data-original-title="Remove"><i class="fa fa-edit f-s-25" style="margin-right: 10px;"></i></a><a  rel="tooltip" title="" href="https://demo.freaktemplate.com/bookappointment/backend/doctortiming/13" class="m-b-10 m-l-5" data-original-title="Remove"><i class="fa fa-clock f-s-25" style="margin-right: 10px;"></i></a><a onclick="delete_record('https://demo.freaktemplate.com/bookappointment/backend/deletedoctor/13')" rel="tooltip" title="" class="m-b-10 m-l-5" data-original-title="Remove"><i class="fa fa-trash f-s-25"></i></a>"
 //}
-        User::create([
-            'name' => 'Dr. Mahajan',
-            'email' => 'mahajan@gmail.com',
+        $admin = [
+            'name' => 'Administrador main',
+            'avatar' => 'admin.jpg',
+            'especialidad_id' => 1,
+            'ciudad_id' => 1,
+            'tarifa' => 0,
+            'email' => 'admin@gmail.com',
             'password' => bcrypt('123456'),
-            'especialidad_id' => 4, // Ayurveda
-            'ciudad_id' => 1,       // San Jose
-            'celular' => '+919878767899',
-            'avatar' => '1725962471.jpg', // solo el nombre del archivo
-            'horas_de_trabajo' => '9:00 AM to 6:00 PM',
-            'tarifa' => 100,
-            'acerca' => 'A doctor diagnoses and treats diseases and conditions, as well as provides treatment in many forms including medication, procedures, surgery, or therapy.',
-            'servicio' => 'A doctor diagnoses and treats diseases and conditions, as well as provides treatment in many forms including medication, procedures, surgery, or therapy.',
-            'cuidado' => 'A doctor diagnoses and treats diseases and conditions, as well as provides treatment in many forms including medication, procedures, surgery, or therapy.',
-            'direccion' => '96 E Broadway, New York, NY 10002, USA',
-            'lat' => '40.71397887526981',
-            'lng' => '-73.99348443482666',
-            'role' => 'Doctor',
-        ]);//1
-        User::create([
-            'name' => 'Dr. Giorgos',
-            'email'=> "Edward@gmail.com",
-            'password' => bcrypt('123456'),
-            'especialidad_id' => 2, // Cardiologist
-            'ciudad_id' => 1,       // San Jose
-            'celular' => '87542695836',
-            'avatar' => '6.jpg', // solo el nombre del archivo
-            'horas_de_trabajo' => '9:00 AM to 6:00 PM',
-            'tarifa' => 250,
-            'acerca' => 'Dr. Agnes Ayres is a Maxillofacial Surgeon in New York, NY. Dr. Ayres has more experience with Congenital Cardiac Disorders and Cardiac Care than other specialists in his area. He is affiliated with medical facilities such as Mount Sinai Morningside and Roosevelt Hospital. He is accepting new patients. Be sure to call ahead with Dr. Pinney to book an appointment.',
-            'servicio' => 'Urologist',
-            'cuidado' => 'Dr. Agnes Ayres is a Maxillofacial Surgeon in New York, NY. Dr. Ayres has more experience with Congenital Cardiac Disorders and Cardiac Care than other specialists in his area. He is affiliated with medical facilities such as Mount Sinai Morningside and Roosevelt Hospital. He is accepting new patients. Be sure to call ahead with Dr. Pinney to book an appointment.',
-            'direccion' => '96 E Broadway, New York, NY 10002, USA',
-            'lat' => '40.71397887526981',
-            'lng' => '-73.99348443482666',
-            'role' => 'Doctor',
-        ]);//2
-        User::create([
-            'name' => 'Dr. Cate Blanchett',
-            'email' => 'Cate@gmail.com',
-            'password' => bcrypt('123456'),
-            'especialidad_id' => 3, // Dermatologist
-            'ciudad_id' => 1,       // San Jose
-            'celular' => '87542695836',
-            'avatar' => '7.jpg', // solo el nombre del archivo
-            'horas_de_trabajo' => '9:00 AM to 6:00 PM',
-            'tarifa' => 250,
-            'acerca' => 'Dr. Agnes Ayres is a Maxillofacial Surgeon in New York, NY. Dr. Ayres has more experience with Congenital Cardiac Disorders and Cardiac Care than other specialists in his area. He is affiliated with medical facilities such as Mount Sinai Morningside and Roosevelt Hospital. He is accepting new patients. Be sure to call ahead with Dr. Pinney to book an appointment.',
-            'servicio' => 'Urologist',
-            'cuidado' => 'Dr. Agnes Ayres is a Maxillofacial Surgeon in New York, NY. Dr. Ayres has more experience with Congenital Cardiac Disorders and Cardiac Care than other specialists in his area. He is affiliated with medical facilities such as Mount Sinai Morningside and Roosevelt Hospital. He is accepting new patients. Be sure to call ahead with Dr. Pinney to book an appointment.',
-            'direccion' => '96 E Broadway, New York, NY 10002, USA',
-            'lat' => '40.71397887526981',
-            'lng' => '-73.99348443482666',
-            'role' => 'Doctor',
-        ]);//3
-        User::create([
-            'name' => 'Dr. Leroy Anderson',
-            'email' => 'Leroy@gmail.com',
-            'password' => bcrypt('123456'),
-            'especialidad_id' => 4, // Ayurveda
-            'ciudad_id' => 1,       // San Jose
-            'celular' => '87542695836',
-            'avatar' => '8.jpg', // solo el nombre del archivo
-            'horas_de_trabajo' => '9:00 AM to 6:00 PM',
-            'tarifa' => 250,
-            'acerca' => 'Dr. Agnes Ayres is a Maxillofacial Surgeon in New York, NY. Dr. Ayres has more experience with Congenital Cardiac Disorders and Cardiac Care than other specialists in his area. He is affiliated with medical facilities such as Mount Sinai Morningside and Roosevelt Hospital. He is accepting new patients. Be sure to call ahead with Dr. Pinney to book an appointment.',
-            'servicio' => 'Urologist',
-            'cuidado' => 'Dr. Agnes Ayres is a Maxillofacial Surgeon in New York, NY. Dr. Ayres has more experience with Congenital Cardiac Disorders and Cardiac Care than other specialists in his area. He is affiliated with medical facilities such as Mount Sinai Morningside and Roosevelt Hospital. He is accepting new patients. Be sure to call ahead with Dr. Pinney to book an appointment.',
-            'direccion' => '96 E Broadway, New York, NY 10002, USA',
-            'lat' => '40.71397887526981',
-            'lng' => '-73.99348443482666',
-            'role' => 'Doctor',
-        ]);//4
-        User::create([
-            'name' => 'Dr Poll Woker',
-            'email' => 'Poll@gmail.com',
-            'password' => bcrypt('123456'),
-            'especialidad_id' => 5, // Eye Care
-            'ciudad_id' => 1,       // San Jose
-            'celular' => '87542695836',
-            'avatar' => '10.jpg', // solo el nombre del archivo
-            'horas_de_trabajo' => '9:00 AM to 6:00 PM',
-            'tarifa' => 250,
-            'acerca' => 'Dr. Agnes Ayres is a Maxillofacial Surgeon in New York, NY. Dr. Ayres has more experience with Congenital Cardiac Disorders and Cardiac Care than other specialists in his area. He is affiliated with medical facilities such as Mount Sinai Morningside and Roosevelt Hospital. He is accepting new patients. Be sure to call ahead with Dr. Pinney to book an appointment.',
-            'servicio' => 'A doctor diagnoses and treats diseases and conditions, as well as provides treatment in many forms including medication, procedures, surgery, or therapy.',
-            'cuidado' => 'Dr. Agnes Ayres is a Maxillofacial Surgeon in New York, NY. Dr. Ayres has more experience with Congenital Cardiac Disorders and Cardiac Care than other specialists in his area. He is affiliated with medical facilities such as Mount Sinai Morningside and Roosevelt Hospital. He is accepting new patients. Be sure to call ahead with Dr. Pinney to book an appointment.',
-            'direccion' => '96 E Broadway, New York, NY 10002, USA',
-            'lat' => '40.71397887526981',
-            'lng' => '-73.99348443482666',
-            'role' => 'Doctor',
-        ]);//5
+            'role' => 'Admin',
+        ];
+        User::create($admin);
+        $doctores = [
+            [
+                'name' => 'Dr. Mahajan',
+                'avatar' => '1725962471.jpg',
+                'especialidad_id' => 4,
+                'ciudad_id' => 1,
+                'tarifa' => 100,
+                'email' => 'mahajan@gmail.com',
+            ],
+            [
+                'name' => 'Dr. Giorgos',
+                'avatar' => '6.jpg',
+                'especialidad_id' => 2,
+                'ciudad_id' => 1,
+                'tarifa' => 250,
+                'email' => 'Edward@gmail.com',
+            ],
+            [
+                'name' => 'Dr. Cate Blanchett',
+                'avatar' => '7.jpg',
+                'especialidad_id' => 3,
+                'ciudad_id' => 1,
+                'tarifa' => 250,
+                'email' => 'Cate@gmail.com',
+            ],
+            [
+                'name' => 'Dr. Leroy Anderson',
+                'avatar' => '8.jpg',
+                'especialidad_id' => 4,
+                'ciudad_id' => 1,
+                'tarifa' => 250,
+                'email' => 'Leroy@gmail.com',
+            ],
+            [
+                'name' => 'Dr Poll Woker',
+                'avatar' => '10.jpg',
+                'especialidad_id' => 5,
+                'ciudad_id' => 1,
+                'tarifa' => 250,
+                'email' => 'Poll@gmail.com',
+            ],
+            [
+                'name' => 'Dr Juan Konare',
+                'avatar' => '11.jpg',
+                'especialidad_id' => 6,
+                'ciudad_id' => 3,
+                'tarifa' => 250,
+                'email' => 'juankonare@gmail.com',
+            ],
+            [
+                'name' => 'Dr Joseph Martina',
+                'avatar' => '17.jpg',
+                'especialidad_id' => 9,
+                'ciudad_id' => 5,
+                'tarifa' => 250,
+                'email' => 'martina@gmail.com',
+            ],
+            [
+                'name' => 'Dr Catholina Marin',
+                'avatar' => '14.jpg',
+                'especialidad_id' => 8,
+                'ciudad_id' => 4,
+                'tarifa' => 250,
+                'email' => 'Catholina@gmail.com',
+            ],
+            [
+                'name' => 'Dr Andrew Simons',
+                'avatar' => '15.jpg',
+                'especialidad_id' => 6,
+                'ciudad_id' => 4,
+                'tarifa' => 250,
+                'email' => 'Simonse@gmil.com',
+            ],
+            [
+                'name' => 'Dr Jin Paul',
+                'avatar' => '1680252707.jpg',
+                'especialidad_id' => 8,
+                'ciudad_id' => 8,
+                'tarifa' => 250,
+                'email' => 'jin_paul12@gmail.com',
+            ],
+            [
+                'name' => 'Dr Anthony Gonzalise',
+                'avatar' => '1680252726.jpg',
+                'especialidad_id' => 9,
+                'ciudad_id' => 9,
+                'tarifa' => 250,
+                'email' => 'anthony12@gmail.com',
+            ],
+            [
+                'name' => 'Dr Jacson Desauza',
+                'avatar' => '1680252761.jpg',
+                'especialidad_id' => 10,
+                'ciudad_id' => 9,
+                'tarifa' => 250,
+                'email' => 'Jacson@gmail.com',
+            ],
+            [
+                'name' => 'Dr Mark Smith',
+                'avatar' => '1680252794.jpg',
+                'especialidad_id' => 4,
+                'ciudad_id' => 10,
+                'tarifa' => 250,
+                'email' => 'mark_smith12@gmail.com',
+            ],
+            [
+                'name' => 'Dr Michel Jonson',
+                'avatar' => '1680252314.jpg',
+                'especialidad_id' => 11,
+                'ciudad_id' => 7,
+                'tarifa' => 250,
+                'email' => 'michel@gmail.com',
+            ],
+            [
+                'name' => 'Dr Ethan Noah',
+                'avatar' => '1680252650.jpg',
+                'especialidad_id' => 10,
+                'ciudad_id' => 7,
+                'tarifa' => 250,
+                'email' => 'anthony@gmail.com',
+            ],
+            [
+                'name' => 'Dr James Paul',
+                'avatar' => '1680252405.jpg',
+                'especialidad_id' => 2,
+                'ciudad_id' => 6,
+                'tarifa' => 250,
+                'email' => 'hyori@gmai.com',
+            ],
+            [
+                'name' => 'Dr Charles',
+                'avatar' => '1680252600.jpg',
+                'especialidad_id' => 1,
+                'ciudad_id' => 6,
+                'tarifa' => 250,
+                'email' => 'chrles@gmail.com',
+            ],
+            [
+                'name' => 'Dr Amily Smith',
+                'avatar' => '16.jpg',
+                'especialidad_id' => 5,
+                'ciudad_id' => 5,
+                'tarifa' => 250,
+                'email' => 'mark_smith@gmail.com',
+            ],
+            [
+                'name' => 'Dr Mark Tescrothic',
+                'avatar' => '1680252383.jpg',
+                'especialidad_id' => 3,
+                'ciudad_id' => 8,
+                'tarifa' => 250,
+                'email' => 'mark_tescrothic@gmail.com',
+            ],
+        ];
 
-        User::create([
-            'name' => 'Dr Juan Konare',
-            'email' => 'juankonare@gmail.com',
-            'password' => bcrypt('123456'),
-            'especialidad_id' => 6, // Gastroenterology
-            'ciudad_id' => 1,       // San Jose
-            'celular' => '87542695836',
-            'avatar' => '11.jpg', // solo el nombre del archivo
-            'horas_de_trabajo' => '9:00 AM to 6:00 PM',
-            'tarifa' => 250,
-            'acerca' => 'Dr. Agnes Ayres is a Maxillofacial Surgeon in New York, NY. Dr. Ayres has more experience with Congenital Cardiac Disorders and Cardiac Care than other specialists in his area. He is affiliated with medical facilities such as Mount Sinai Morningside and Roosevelt Hospital. He is accepting new patients. Be sure to call ahead with Dr. Pinney to book an appointment.',
-            'servicio' => 'A doctor diagnoses and treats diseases and conditions, as well as provides treatment in many forms including medication, procedures, surgery, or therapy.',
-            'cuidado' => 'Dr. Agnes Ayres is a Maxillofacial Surgeon in New York, NY. Dr. Ayres has more experience with Congenital Cardiac Disorders and Cardiac Care than other specialists in his area. He is affiliated with medical facilities such as Mount Sinai Morningside and Roosevelt Hospital. He is accepting new patients. Be sure to call ahead with Dr. Pinney to book an appointment.',
-            'direccion' => '96 E Broadway, New York, NY 10002, USA',
-            'lat' => '40.71397887526981',
-            'lng' => '-73.99348443482666',
-            'role' => 'Doctor',
-        ]);//6
+        foreach ($doctores as $doc) {
+            User::create([
+                'name' => $doc['name'],
+                'email' => $doc['email'],
+                'password' => bcrypt('123456'),
+                'especialidad_id' => $doc['especialidad_id'],
+                'ciudad_id' => $doc['ciudad_id'],
+                'celular' => '87542695836',
+                'avatar' => $doc['avatar'],
+                'horas_de_trabajo' => '9:00 AM to 6:00 PM',
+                'tarifa' => $doc['tarifa'],
+                'acerca' => 'A doctor diagnoses and treats diseases and conditions, as well as provides treatment in many forms including medication, procedures, surgery, or therapy.',
+                'servicio' => 'A doctor diagnoses and treats diseases and conditions, as well as provides treatment in many forms including medication, procedures, surgery, or therapy.',
+                'cuidado' => 'A doctor diagnoses and treats diseases and conditions, as well as provides treatment in many forms including medication, procedures, surgery, or therapy.',
+                'direccion' => '96 E Broadway, New York, NY 10002, USA',
+                'lat' => '40.71397887526981',
+                'lng' => '-73.99348443482666',
+                'role' => 'Doctor',
+            ]);
+        }
 
     }
 }
