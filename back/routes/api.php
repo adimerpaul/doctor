@@ -8,8 +8,8 @@ use Illuminate\Support\Facades\Route;
 //})->middleware('auth:sanctum');
 
 Route::get('/carrusel', [\App\Http\Controllers\CarruselController::class, 'index']);
-//doctores
 Route::get('/doctores', [\App\Http\Controllers\UserController::class, 'doctores']);
+Route::post('/login', [\App\Http\Controllers\UserController::class, 'login']);
 Route::middleware('auth:sanctum')->group(function () {
     Route::post('/carrusel', [\App\Http\Controllers\CarruselController::class, 'store']);
     Route::put('/carrusel/{id}', [\App\Http\Controllers\CarruselController::class, 'update']);

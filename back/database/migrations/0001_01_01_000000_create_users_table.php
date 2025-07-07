@@ -17,7 +17,7 @@ return new class extends Migration {
             $table->unsignedBigInteger('especialidad_id');
             $table->unsignedBigInteger('ciudad_id')->nullable();
             $table->string('celular')->nullable();
-            $table->string('avatar')->nullable();
+            $table->string('avatar')->default('default.png');
             $table->string('horas_de_trabajo')->nullable();
             $table->decimal('tarifa', 8, 2)->nullable();
             $table->text('acerca')->nullable();
